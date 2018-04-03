@@ -1,0 +1,20 @@
+test_example()
+{
+# Expected value of your check
+
+OKVALUE=1 
+
+# Actual check
+
+CURRENT=$(<yourcommand>)
+
+# Basic logic to verify results and return appropriate value to main script
+
+ if [[ "x$CURRENT" != "x$OKVALUE" ]]; then
+  return 1
+ else
+  return 0
+ fi
+
+}
+
